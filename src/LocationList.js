@@ -1,20 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 
 
+export default class Locations extends Component {
 
+    state = {
+        locations: [
+            { name: "Nashville North" },
+            { name: "Nashville South" }
+        ]
+    }
 
-export default class LocationList extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
+                <ul>
                 {
-                    this.props.locations.map(location =>
-                        <article>
-                            {location.name} {/* This is targeting location.name, sorting it into this file */}
-                        </article>
-                    )}
-            </div>
-                    
+                    this.state.locations.map(location =>  <li>{location.name}</li> )
+                }
+                </ul>
+            </React.Fragment>
         )
     }
 }
