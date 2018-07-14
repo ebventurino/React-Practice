@@ -5,10 +5,10 @@ export default class Employee extends Component {
 
     state = {
         employees: [
-            { name: "Jessica Younker" },
-            { name: "Jordan Nelson" },
-            { name: "Zoe LeBlanc" },
-            { name: "Blaise Roberts" }
+            { id: 1, name: "Jessica Younker" },
+            { id: 2, name: "Jordan Nelson" },
+            { id: 3, name: "Zoe LeBlanc" },
+            { id: 4, name: "Blaise Roberts" }
         ]
     }
 
@@ -17,7 +17,7 @@ export default class Employee extends Component {
             <React.Fragment>
                 <ul>
                 {
-                    this.state.employees.map(employee =>  <li>{employee.name}</li> )
+                    this.state.employees.map(employee =>   <li key={employee.id}>{employee.name}</li> )
                 }
                 </ul>
             </React.Fragment>
