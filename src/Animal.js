@@ -17,6 +17,7 @@ export default props => {
                         Details
                     </Link>
                 }
+                <a href="./animals" onClick={() => props.checkOutAnimal(props.animal.id)}>Delete</a>
             </div>
         </div>
     )
