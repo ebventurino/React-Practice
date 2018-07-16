@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Location from "./Location"
 
 
 export default class Locations extends Component {
@@ -14,11 +15,16 @@ export default class Locations extends Component {
         return (
             <React.Fragment>
                 <ul>
-                {
-                    this.state.locations.map(location =>   <li key={location.id}>{location.name}</li> )
-                }
+                    {
+                        this.state.locations.map((location) => {
+                            return <Location location={location} />
+                        }
+                        )
+                    }
                 </ul>
             </React.Fragment>
         )
     }
 }
+
+

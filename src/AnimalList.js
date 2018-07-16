@@ -18,11 +18,14 @@ export default class AnimalList extends Component {
         return (
             <React.Fragment>
                 <ul>
-                {
-                    this.state.animals.map(animal => <Animal banana = {animal}/> )
-                }
-                
-        
+                    {
+                        this.state.animals.map((dog) => {
+
+                           return <Animal banana={dog} />
+                        }
+                        )
+                    }
+
                 </ul>
             </React.Fragment>
         )
